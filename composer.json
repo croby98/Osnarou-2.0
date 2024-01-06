@@ -3,7 +3,7 @@
     "autoload": {
         "psr-4": {
             "Routeur\\" : "Routeur/",
-            "Exceptions\\" : "Exceptions"
+            "Exceptions\\" : "Exceptions/"
         }
     },
     "authors": [
