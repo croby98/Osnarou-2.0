@@ -2,9 +2,10 @@
     "name": "croby/osnarou-2.0",
     "autoload": {
         "psr-4": {
-            "Routeur\\": "Routeur/",
-            "Exceptions\\": "Exceptions/",
-            "Controllers\\": "Controllers/"
+            "Routeur\\": "App/Routeur/",
+            "Exceptions\\": "App/Exceptions/",
+            "Controllers\\": "App/Controllers/",
+            "Models\\": "App/Models/"
         }
     },
     "authors": [

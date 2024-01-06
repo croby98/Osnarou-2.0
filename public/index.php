@@ -9,11 +9,7 @@ require('../vendor/autoload.php');
 $route = new Routeur();
 
 
-
-$route->generateRoute('/', function () {
-    return 'Page Home';
-});
-
+$route->generateRoute('/', ['Controllers\HomeController', 'index']);
 
 
 try{
@@ -22,6 +18,6 @@ try{
 
 } catch (RouteNotFoundException $e) {
 
-    $e->getMessage();
+    echo $e->getMessage();
     
 }

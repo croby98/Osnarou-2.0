@@ -6,14 +6,14 @@ use Exceptions\RouteNotFoundException;
 
 class Routeur
 {
-    private array $routes = [];
+    private array $routes;
 
-    public function generateRoute(string $path, callable|array $action) : void 
+    public function generateRoute(string $path, callable|array $action): void 
     {
         $this->routes[$path] = $action;
     }
 
-    public function resolveRoute(string $uri) : mixed 
+    public function resolveRoute(string $uri): mixed 
     {
         $path = explode('/', $uri)[0];
         $action = $this->routes[$path] ?? null;
@@ -28,7 +28,7 @@ class Routeur
             if(class_exists($className) && method_exists($className, $method)){
                 $class = new $className();
 
-                call_user_func_array([$class, $method], []);
+                return call_user_func_array([$class, $method], []);
             }
         }
 
