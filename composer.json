@@ -5,7 +5,8 @@
             "Routeur\\": "App/Routeur/",
             "Exceptions\\": "App/Exceptions/",
             "Controllers\\": "App/Controllers/",
-            "Models\\": "App/Models/"
+            "Models\\": "App/Models/",
+            "Sources\\":"App/Src/"
         }
     },
     "authors": [

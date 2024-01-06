@@ -15,7 +15,7 @@ class Routeur
 
     public function resolveRoute(string $uri): mixed 
     {
-        $path = explode('/', $uri)[0];
+        $path = explode('?', $uri)[0];
         $action = $this->routes[$path] ?? null;
 
         if(is_callable($action)){
