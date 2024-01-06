@@ -1,7 +1,27 @@
 <?php
 
-use Router\Router;
+use Exceptions\RouteNotFoundException;
+use Routeur\Routeur;
 
-require_once('./../vendor/autoload.php');
+require('../vendor/autoload.php');
 
-$router = new Router($_REQUEST['URI']);
+
+$route = new Routeur();
+
+
+
+$route->generateRoute('/', function () {
+    return 'Page Home';
+});
+
+
+
+try{
+
+    echo $route->resolveRoute($_SERVER['REQUEST_URI']);
+
+} catch (RouteNotFoundException $e) {
+
+    $e->getMessage();
+    
+}
