@@ -1,0 +1,15 @@
+{
+    "name": "croby/osnarou-2.0",
+    "autoload": {
+        "psr-4": {
+            "Croby\\Osnarou20\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "croby98",
+            "email": "guillaumecrob@gmail.com"
+        }
+    ],
+    "require": {}
+}
